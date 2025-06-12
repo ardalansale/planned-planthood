@@ -48,7 +48,6 @@ p,
 li,
 figcaption {
     text-wrap: pretty;
-    max-width: 55ch;
 }
 
 /* for container queries, landmarks as containers */
