@@ -15,6 +15,7 @@
 
 /*** COMPOSITION ***/
 .wrapper {
+  container-type: inline-size;
   max-width: 77.5rem;
   padding-left: calc(var(--spacing-xl) + var(--spacing-m));
   padding-right: calc(var(--spacing-xl) + var(--spacing-m));
@@ -168,12 +169,12 @@
   display: flex; /* Flexbox låter mig kontrollera avståndet mellan elementen bättre samtidigt som de är centrerade */
   justify-content: center;
   align-items: center;
-  gap: calc( 6 * var(--spacing-m));
+  flex-wrap: wrap;
 }
 
 .newsletter svg {
-  width: 14rem;
-  height: 14rem;
+  width: 50%;
+  height: 50%;
   overflow: visible;
   padding: 3.6rem;
   background-color: var(--clr-green-400);
@@ -181,12 +182,11 @@
 }
 .newsletter__icon {
   display: flex;
-  justify-self: center;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsletter__subscribe {
-  background-color: ;
   width: fit-content;
   max-width: 55ch;
   display: flex;
@@ -260,12 +260,13 @@
   display: flex; /* Flexbox låter mig kontrollera avståndet mellan elementen bättre samtidigt som de är centrerade */
   justify-content: center;
   align-items: center;
-  gap: calc( 6 * var(--spacing-m));
+  gap: var(--spacing-m);
+  flex-wrap: wrap;
 }
 
 .plantedplants svg {
-  width: 14rem;
-  height: 14rem;
+  width: 50%;
+  height: 50%;
   overflow: visible;
   padding: 3.6rem;
   background-color: var(--clr-green-400);
@@ -275,8 +276,8 @@
 
 .plantedplants__icon {
   display: flex;
-  justify-self: center;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .plantedplants__readmore {
@@ -310,10 +311,10 @@
 /***************************************************/
 
 /****** RESPONSIV ******/
-/* 640px - Mobilt (porträtt) */
 
-@media (max-width: 768px) {
+@media (width < 768px) {
 
+  /* NAV BAR */
   .nav__menu {
     display: none;
   }
@@ -323,15 +324,23 @@
   }
 }
 
-/* 1024 - Tablet (porträtt */
+@media (width < 1000px) {
+  /** HUVUDINNEHÅLL */
+  .newsletter,
+  .plantedplants {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .newsletter__icon { order: 1; }
+  .newsletter__subscribe { order: 2; }
 
-@media (max-width: 640px) {
-
-  .nav__menu {
-    display: none;
+  .newsletter,
+  .plantedplants h2 {
+    text-align: center;
   }
 
-  .nav__hamburger {
-    display: block;
+    .newsletter,
+  .plantedplants p {
+    text-align: center;
   }
 }
