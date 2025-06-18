@@ -165,14 +165,10 @@
 /* MAIN -- Nyhetsbrev */
 
 .newsletter {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center; /* Centrera direkt */
-  justify-items: center;  
-  height: auto;
-  width: 48rem;
-  max-width: 100%;
+  display: flex; /* Flexbox låter mig kontrollera avståndet mellan elementen bättre samtidigt som de är centrerade */
+  justify-content: center;
+  align-items: center;
+  gap: calc( 6 * var(--spacing-m));
 }
 
 .newsletter svg {
@@ -185,23 +181,17 @@
 }
 .newsletter__icon {
   display: flex;
-  justify-self: flex-end;
-  width: fit-content;
-  /* width: 40vw; */
+  justify-self: center;
   justify-items: center;
 }
 
 .newsletter__subscribe {
+  background-color: ;
   width: fit-content;
-  /* width: 100%; */
-  max-width: 40rem;
+  max-width: 55ch;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: var(--spacing-xl);
-  justify-self: flex-start
-
 }
 
 .newsletter__subscribe h2 {
@@ -218,7 +208,6 @@
   border-radius: 2.5rem;
   background-color: transparent;
   padding: var(--spacing-xs) var(--spacing-xs);
-  
 }
 
 .newsletter__form--input {
@@ -264,12 +253,66 @@
   -webkit-box-shadow: 0 0 0px 1000px var(--clr-primary-light-1) inset !important; 
   -webkit-text-fill-color: black !important;
 }
+
+/* MAIN -- Planterade Plantor */
+
+.plantedplants {
+  display: flex; /* Flexbox låter mig kontrollera avståndet mellan elementen bättre samtidigt som de är centrerade */
+  justify-content: center;
+  align-items: center;
+  gap: calc( 6 * var(--spacing-m));
+}
+
+.plantedplants svg {
+  width: 14rem;
+  height: 14rem;
+  overflow: visible;
+  padding: 3.6rem;
+  background-color: var(--clr-green-400);
+  border-radius: 100%;
+}
+
+
+.plantedplants__icon {
+  display: flex;
+  justify-self: center;
+  justify-items: center;
+}
+
+.plantedplants__readmore {
+  width: fit-content;
+  max-width: 55ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.plantedplants__form {
+  display: flex;
+  justify-content: flex-end;  
+}
+
+.plantedplants__form--btn {
+  background-color: var(--clr-green-400);
+  border: 2px solid transparent;
+  padding: var(--spacing-s) var(--spacing-l);
+  border-radius: 2.5rem;
+  cursor: pointer;
+  font-weight: var(--fw-600);
+}
+
+.plantedplants__form--btn:hover {
+  background-color: var(--clr-accent-dark);
+  color: var(--clr-green-400);
+  border: 2px solid var(--clr-green-400);
+}
+
 /***************************************************/
 
 /****** RESPONSIV ******/
 /* 640px - Mobilt (porträtt) */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
   .nav__menu {
     display: none;
