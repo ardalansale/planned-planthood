@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Landing page för Planned Planthood">
   <title>Planned Planthood</title>
-  <link rel="stylesheet" href="stylesheets/global.css">
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/global.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -25,10 +25,10 @@
               aria-hidden="true"
               focusable="false"
               >
-            <g fill="none" stroke="currentColor" stroke-width="12">
-              <path d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"/>
-              <path d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"/>
-            </g>
+                <g fill="none" stroke="currentColor" stroke-width="12">
+                <path d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"/>
+                <path d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"/>
+                </g>
             </svg>
 
             <div class="logo__text">
@@ -37,7 +37,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- Hamburgarmeny -->
         <div class="nav__hamburger" aria-hidden="true">
@@ -77,12 +76,12 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           <br>Similique, corporis ipsum.</p>
           <ul role="list" class="hero__collage">
-              <li data-grid="a"><img src="images/lavendel.webp" alt="Bild 1"></li>
-              <li data-grid="b"><img src="images/orkide.webp" alt="Bild 2"></li>
-              <li data-grid="c"><img src="images/basil.webp" alt="Bild 3"></li>
-              <li data-grid="d"><img src="images/lemon.webp" alt="Bild 4"></li>
-              <li data-grid="e"><img src="images/strawberry.webp" alt="Bild 5"></li>
-              <li data-grid="f"><img src="images/sunflower.webp" alt="Bild 6"></li>
+              <li data-grid="a"><img src="./images/lavendel.webp" alt="Bild 1"></li>
+              <li data-grid="b"><img src="./images/orkide.webp" alt="Bild 2"></li>
+              <li data-grid="c"><img src="./images/basil.webp" alt="Bild 3"></li>
+              <li data-grid="d"><img src="./images/lemon.webp" alt="Bild 4"></li>
+              <li data-grid="e"><img src="./images/strawberry.webp" alt="Bild 5"></li>
+              <li data-grid="f"><img src="./images/sunflower.webp" alt="Bild 6"></li>
           </ul>
         </div>
       </section>
@@ -191,7 +190,7 @@
       <section class="wrapper--white"> <!-- 'Planterade Plantor' Block -->
         <div class="wrapper plantedplants">
 
-        <div class="plantedplants__icon"> <!-- Ikon (jag lyckas inte att få den att bli smalare; bara bladen) -->
+        <div class="plantedplants__icon"> <!-- Ikon (obs.jag lyckas inte att få den att bli smalare; bara bladen) -->
           <svg viewBox="-4 0 80 90"
             preserveAspectRatio="xMidYMid slice"
             fill="none" 
@@ -202,7 +201,7 @@
                   clip-rule="evenodd" 
                   d="M10 39.2725C6.13401 39.2725 3 42.4065 2 46.2725V49.079C3 52.1558 4.98508 54.769 7.74438 55.7076V64.6762C7.74438 80.162 20.2981 92.7157 35.7839 92.7157C51.2697 92.7157 63.8234 80.162 63.8234 64.6762V55.612C66.4446 54.6005 68.3041 52.0569 68.3041 49.079V46.2725C68.3041 42.4065 65.1701 39.2725 61.3041 39.2725H10ZM27.8766 56.079H22.2052L22.1124 50.079H27.8766V56.079ZM32.6209 56.079H57.8234V64.6762C57.8234 76.8483 47.956 86.7157 35.7839 86.7157C23.6118 86.7157 13.7444 76.8483 13.7444 64.6762V56.079H16.4059L16.3131 50.079H10C9.44772 50.079 9 49.6313 9 49.079V46.2725C9 45.7202 9.44772 45.2725 10 45.2725H61.3041C61.8564 45.2725 62.3041 45.7202 62.3041 46.2725V49.079C62.3041 49.6313 61.8564 50.079 61.3041 50.079H32.6209V56.079Z" 
                   fill="white"
-                  stroke-width="2"
+                  
             />
             <path
                 d="M38.7837 17.233C38.7837 15.5761 37.4405 14.233 35.7837 14.233C34.1268 14.233 32.7837 15.5761 32.7837 17.233H38.7837ZM38.7837 41.4818V17.233H32.7837V41.4818H38.7837Z"
@@ -211,7 +210,7 @@
             <path
                 d="M3.89136 3H21.5508C29.4114 3 35.7838 9.37232 35.7838 17.233V17.233H18.1243C10.2637 17.233 3.89136 10.8607 3.89136 3V3Z"
                 stroke="white"
-                stroke-width="4"
+                stroke-width="4" <!-- Går att >
                 stroke-linejoin="round"
             />
             <path
@@ -220,7 +219,7 @@
                   stroke-width="4"
                   stroke-linejoin="round"
               />
-            </svg>
+          </svg>
         </div>
 
         <article class="plantedplants__readmore"> <!-- Läs Mer -->
@@ -236,8 +235,77 @@
       </div>
       </section>
 
-
     </main>
+
+    <footer class="wrapper--footer"> <!-- FOOTER -->
+      <div class="wrapper footer">
+        <div class="footer__information"> <!-- Logo, kort om företaget och kontaktuppgifter -->
+          <div class="logo"> 
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 214 210"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+              >
+                <g fill="none" stroke="white" stroke-width="12">
+                <path d="M116.833 193.533C117.406 192.909 117.969 192.279 118.522 191.645L168.173 160.226C206.289 136.107 217.36 86.0907 192.816 48.5247C189.153 42.9185 181.619 41.3343 175.976 44.905L125.764 76.6782C121.37 70.1605 116.086 64.0725 109.92 58.5872L52.4904 7.49831C46.8526 2.48295 38.1677 2.90777 33.061 8.46735C-2.89261 47.6094 0.211903 108.041 39.9737 143.413L97.4031 194.502C103.041 199.517 111.726 199.092 116.833 193.533Z"/>
+                <path d="M115.122 194.336C115.527 193.897 115.927 193.455 116.319 193.009L153.69 169.521C182.93 151.143 191.451 112.997 172.598 84.3362C169.529 79.6722 163.25 78.3762 158.555 81.3272L121.425 104.664C118.17 100 114.303 95.6362 109.83 91.6843L66.4654 53.3677C61.8146 49.2582 54.6598 49.6021 50.4409 54.1641C22.9065 83.9378 25.2893 129.917 55.732 156.816L99.097 195.132C103.748 199.242 110.903 198.898 115.122 194.336Z"/>
+              </g>
+            </svg>
+          
+            <div class="logo__text">
+              <p>PLANNED</p>
+              <p>PLANTHOOD</p>
+            </div>
+          </div>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum. Iure, eius molestias?</p>
+
+          <div class="footer__tele">
+              <svg width="18" 
+                height="18" 
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                >
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M-3-3h24v24H-3z"/>
+                  <path d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z" fill="#FFF"/>
+                </g>
+              </svg>
+              <p>Telefon: 020-1234567</p>
+          </div>
+
+          <div class="footer__email">
+              <svg 
+              width="20" 
+              height="16" 
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M-2-4h24v24H-2z"/>
+                  <path d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z" fill="#FFF"/>
+                </g>
+              </svg>
+            <a>info@plannedplant.com</a>
+          </div>
+        </div>
+        
+        <div class="footer__container--right">  <!-- Footer länkar -->
+          <aside class="footer__nav">
+            <ul class="footer__links" role="list">
+              <li><a>Hem</a></li>
+              <li><a>Historik</a></li>
+              <li><a>Tips</a></li>
+              <li><a>Kontakt</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>

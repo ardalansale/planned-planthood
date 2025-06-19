@@ -15,14 +15,16 @@
 
 /*** COMPOSITION ***/
 .wrapper {
-  container-type: inline-size;
+  box-sizing: border-box;
   max-width: 77.5rem;
-  padding-left: calc(var(--spacing-xl) + var(--spacing-m));
-  padding-right: calc(var(--spacing-xl) + var(--spacing-m));
+  width: 100%;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
   padding-top: calc(2 * var(--spacing-xl));
   padding-bottom: calc(2 * var(--spacing-xl));
   /* 77.5 rem + 2.5rem = 1240px + 40px = 1280 px */
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
 }
 
@@ -33,13 +35,18 @@
 .wrapper--green {
     background-color: var(--clr-accent-light-1);
 }
+
+.wrapper--footer {
+    background-color: var(--clr-accent);
+}
 /***************************************************/
 
 /*** LOGO ***/
-.logo{
+.logo {
   display: flex;
   align-items: center;
   gap: var(--spacing-m);
+  color: var(--clr-accent);
 }
 
 .logo__text {
@@ -82,9 +89,6 @@
   color: var(--clr-primary-light-1);
 }
 
-.nav .logo {
-  color: var(--clr-accent);
-}
 
 
 /*** HEADER & NAV -- HAMBURGARMENY ****/
@@ -125,22 +129,22 @@
 
 .hero {
   margin: 0 auto;
+  /* width: 100%; */
   display: grid;
-  align-items: center;
-  justify-items: center;
+  align-content: center;
+  justify-content: center;
   gap: 1rem;
 }
 
-.hero p {
+.hero p,
+.hero h2 {
     text-align: center;
-  }
-
+}
 
 .hero__collage {
-  max-height: 40rem;
-  width: 100%;
   display: grid;
-  border: solid var(--spacing-l) var(--clr-primary-light-1);
+  height: 50rem;
+  border: solid 1rem var(--clr-primary-light-1);
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: minmax(100px, 1fr);  
   grid-template-areas:
@@ -308,13 +312,64 @@
   border: 2px solid var(--clr-green-400);
 }
 
+/** FOOTER **/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--clr-primary-light-1)
+}
+
+.footer .logo{
+  color: var(--clr-primary-light-1)
+}
+
+.footer__information {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);;
+  width: 60ch;
+  height: auto;
+
+}
+
+.footer__tele,
+.footer__email {
+  display: flex;
+  gap: var(--spacing-m);
+  align-items: center;
+  width: fit-content;
+}
+
+.footer__nav {
+  justify-content: flex-end;  
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  gap: var(--spacing-m);
+  height: 100%;
+  font-size: var(--fs-500);
+}
+
+.footer a {
+  color: var(--clr-primary-light-1);
+  cursor: pointer;
+}
+
+.footer__links a {
+  text-decoration: none;
+}
+
 /***************************************************/
 
 /****** RESPONSIV ******/
 
 @media (width < 768px) {
 
-  /* NAV BAR */
+  /** HEADER & NAVBAR **/
   .nav__menu {
     display: none;
   }
@@ -322,10 +377,15 @@
   .nav__hamburger {
     display: block;
   }
+
+  /** FOOTER **/
+  .footer__nav {
+    visibility: hidden;
+  }
 }
 
 @media (width < 1000px) {
-  /** HUVUDINNEHÅLL */
+  /** MAIN */
   .newsletter,
   .plantedplants {
     flex-direction: column;
