@@ -201,7 +201,7 @@
 
 .newsletter__form-wrapper {
   align-self: flex-start;
-  width: 25rem;
+  /* width: 25rem; */
   display: flex;
   align-items: center;
   border: 2px solid var(--clr-primary-light-3);
