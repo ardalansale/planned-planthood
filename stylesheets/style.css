@@ -315,12 +315,14 @@
 
 /* Taggar */
 .card__tags {
-  height: 4.5rem; /* Behövs för att allt ska ha sin fasta plats */
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xs);
+  column-gap: var(--spacing-xs);
+  row-gap: 0.4rem;
+  height: 4.4rem; /* Behövs för att rubriken ska alltid vara på samma plats */
   margin: 0;
   list-style: none;
+  padding: var(--spacing-s) 0;
 }
 
 .card__tag {
@@ -408,7 +410,6 @@
   border-radius: 100%;
   pointer-events: none; 
 }
-
 
 .plantedplants__icon {
   display: flex;
