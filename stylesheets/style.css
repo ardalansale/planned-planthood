@@ -265,22 +265,24 @@
   padding: var(--spacing-xl);
 }
 
+/* MAIN -- Plantor Grid - Kort */
 .card {
-  background-color: var(--clr-primary-light-1);
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--border-shadow);
-  padding: var(--spacing-l); 
-  overflow: hidden;
-  height: auto;
+  display: grid;
+  grid-template-rows: auto max-content 1fr auto;
+  gap: var(--spacing-l);
   height: 34rem;
+  background-color: var(--clr-primary-light-1);
+  box-shadow: var(--border-shadow);
+  padding: var(--spacing-l);
+  overflow: hidden;
 }
 
-/* MAIN -- Plantor Grid - Bild */
+/* MAIN -- Plantor Grid - Kort - Bild */
 .card__image-wrapper {
+  grid-row: 1;
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3; /* förminska bild */
+  aspect-ratio: 4/3;
   overflow: hidden;
 }
 
@@ -293,23 +295,32 @@
 .card svg {
   position: absolute;
   opacity: 0.6;
-  top: 50%;
-  left: 50%;
+  top: 50%; /* Placering */
+  left: 50%; /* Placering */
   transform: translate(-50%, -50%);
   width: 30%;
   height: auto;
   z-index: 1;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
-/*** MAIN - Plantor Grid -- Taggar ***/
+/* MAIN -- Plantor Grid - Kort - Innehåll */
+.card__content {
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  overflow: hidden;
+}
+
+/* Taggar */
 .card__tags {
+  height: 4.5rem; /* Behövs för att allt ska ha sin fasta plats */
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  padding: var(--spacing-l) 0;
-  list-style: none;
   margin: 0;
+  list-style: none;
 }
 
 .card__tag {
@@ -318,66 +329,37 @@
   font-size: 0.75rem;
   font-weight: var(--fw-600);
   color: white;
+  height: fit-content;
 }
 
-.card__tag--inomhus {
-  background-color: var(--clr-easy);
-}
+/* Taggar - Färg*/
+.card__tag--inomhus     { background-color: var(--clr-easy); }
+.card__tag--utomhus     { background-color: var(--clr-robust); }
+.card__tag--lättskött   { background-color: var(--clr-fast); }
+.card__tag--solälskande { background-color: var(--clr-sunloving); }
+.card__tag--skuggtålig  { background-color: var(--clr-green); }
+.card__tag--luftrenande { background-color: var(--clr-air); }
+.card__tag--blommande   { background-color: var(--clr-flower); }
+.card__tag--ätbar       { background-color: var(--clr-edible); }
+.card__tag--torktålig   { background-color: var(--clr-colorful); }
+.card__tag--doftande    { background-color: var(--clr-fragrant); }
 
-.card__tag--utomhus {
-  background-color: var(--clr-robust);
-}
-
-.card__tag--lättskött {
-  background-color: var(--clr-fast);
-}
-
-.card__tag--solälskande {
-  background-color: var(--clr-sunloving);
-}
-
-.card__tag--skuggtålig {
-  background-color: var(--clr-green);
-}
-
-.card__tag--luftrenande {
-  background-color: var(--clr-air);
-}
-
-.card__tag--blommande {
-  background-color: var(--clr-flower);
-}
-
-.card__tag--ätbar {
-  background-color: var(--clr-edible);
-}
-
-.card__tag--torktålig {
-  background-color: var(--clr-colorful);
-}
-
-.card__tag--doftande {
-  background-color: var(--clr-fragrant);
-}
-
-
-/* MAIN -- Plantor Grid - Rubrik och beskrivning */
+/* Titel */
 .card__title {
   font-size: var(--fs-600);
-  padding-bottom: var(--spacing-l);
+  flex-shrink: 0;
 }
-
+/* Beskrivning */
 .card__description {
   font-size: var(--fs-400);
-  padding-bottom: var(--spacing-l);
   color: var(--clr-primary-dark);
-  padding: 0;
-  margin: 0;
-  text-wrap:inherit;
+  overflow: hidden;
+  display: -webkit-box;
 }
 
-/* MAIN -- Plantor Grid - Footer */
+/* MAIN -- Plantor Grid - Kort - FOOTER*/
 .card__footer {
+  grid-row: 4;
   display: flex;
   align-items: center;
   gap: var(--spacing-s);
@@ -544,6 +526,16 @@
   .plantedplants p {
     text-align: center;
   }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: fit-content;
+  
+  }
+  
 }
 
 @media (width < 768px) {
@@ -562,6 +554,9 @@
     grid-template-areas:
       "a b c"
       "d e f";
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
   }
   /** FOOTER **/
   .footer__nav {
