@@ -16,3 +16,6 @@ Målet med uppgiften är att:
 - CSS med BEM-namngivning för att undvika konflikter och göra stilar enkla att följa.
 - Grundläggande layout och responsiv design.
 - Grid Layout
+
+### Länk
+- Besök sidan här: [Planned Planthood](https://ardalansale.github.io/planned-planthood/).
