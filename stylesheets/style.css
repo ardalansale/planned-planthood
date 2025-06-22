@@ -267,24 +267,27 @@
 
 .card {
   background-color: var(--clr-primary-light-1);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--border-shadow); 
+  box-shadow: var(--border-shadow);
+  padding: var(--spacing-l); 
+  overflow: hidden;
+  height: auto;
+  height: 34rem;
 }
 
 /* MAIN -- Plantor Grid - Bild */
 .card__image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/3; /* förminska bild */
   overflow: hidden;
 }
 
 .card__image {
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .card svg {
@@ -304,7 +307,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  padding: var(--spacing-s) var(--spacing-l) 0 var(--spacing-l);
+  padding: var(--spacing-l) 0;
   list-style: none;
   margin: 0;
 }
@@ -361,13 +364,16 @@
 /* MAIN -- Plantor Grid - Rubrik och beskrivning */
 .card__title {
   font-size: var(--fs-600);
-  padding: var(--spacing-s) var(--spacing-l) 0 var(--spacing-l);
+  padding-bottom: var(--spacing-l);
 }
 
 .card__description {
   font-size: var(--fs-400);
-  padding: 0 var(--spacing-l) var(--spacing-l) var(--spacing-l);
+  padding-bottom: var(--spacing-l);
   color: var(--clr-primary-dark);
+  padding: 0;
+  margin: 0;
+  text-wrap:inherit;
 }
 
 /* MAIN -- Plantor Grid - Footer */
@@ -375,15 +381,15 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-s);
-  padding: var(--spacing-s) var(--spacing-l);
   margin-top: auto;
 }
 
 .card__avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
+  border: 1px var(--clr-primary-dark) solid;
 }
 
 .card__user-info {
@@ -397,7 +403,7 @@
 }
 
 .card__date {
-  font-size: var( --fs-200);
+  font-size: var(--fs-400);
   color: var(--clr-primary-light-3);
 }
 
